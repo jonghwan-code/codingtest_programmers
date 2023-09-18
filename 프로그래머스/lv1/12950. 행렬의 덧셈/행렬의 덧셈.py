@@ -1,9 +1,8 @@
 def solution(arr1, arr2):
     answer = []
-    for i in range(len(arr1)):
+    for a, b in zip(arr1, arr2):
         tmp = []
-        for j in range(len(arr1[0])):
-            num = arr1[i][j] + arr2[i][j]
-            tmp.append(num)
+        for c, d in zip(a, b):
+            tmp.append(c+d)
         answer.append(tmp)
     return answer
