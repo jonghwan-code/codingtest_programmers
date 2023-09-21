@@ -1,10 +1,9 @@
 def solution(arr):
-    p = arr[0]
-    res = [p]
-    for i in range(1, len(arr)):
-        if p != arr[i]:
-            p = arr[i]
-            res.append(p)
+    res = []
+    for i in range(len(arr)):
+        if res[-1:] == [arr[i]]:
+            continue
+        res.append(arr[i])
     return res
         
         
