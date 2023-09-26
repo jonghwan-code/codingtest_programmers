@@ -5,7 +5,7 @@ def check(c, number):
         return chr(65 + (ord(c) + number - 91))
     else:
         return chr(ord(c) + number)
-
+#테스트
 def solution(s, n):
     res = ''
     for x in s:
