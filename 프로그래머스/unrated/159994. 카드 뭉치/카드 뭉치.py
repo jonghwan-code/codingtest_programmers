@@ -1,17 +1,14 @@
 def solution(cards1, cards2, goal):
-    aN, bN = (0, 0)
-    for word in goal:
-        if word in cards1:
-            aI = cards1.index(word)
-            if aI != aN:
-                return 'No'
-                break
-            aN += 1
-        if word in cards2:
-            bI = cards2.index(word)
-            if bI != bN:
-                return 'No'
-                break
-            bN += 1
+    answer = ''
+    for x in goal:
+        if x != len(cards1) or x != cards2[0]:
+            return 'NO'
+            break
+        elif x == cards1[0]:
+            del cards1[0]
+            print(cards1)
+        else:
+            del cards2[0]
+            print(cards2)
     else:
-        return 'Yes'
+        return 'YES'
