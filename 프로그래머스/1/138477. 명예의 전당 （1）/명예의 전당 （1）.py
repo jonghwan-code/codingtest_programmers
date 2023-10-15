@@ -1,9 +1,10 @@
 def solution(k, score):
-    res = []
+    lastSingersPt = []
     honorList = []
     for x in score:
         honorList.append(x)
+        honorList.sort(reverse=True)
         if len(honorList) > k:
-            honorList.remove(min(honorList))
-        res.append(min(honorList))
-    return res
+            honorList = honorList[:k]
+        lastSingersPt.append(honorList[-1])
+    return lastSingersPt
