@@ -7,5 +7,5 @@ def solution(answers):
     twoP = test([2, 1, 2, 3, 2, 4, 2, 5], answers).count(True)
     thiP = test([3, 3, 1, 1, 2, 2, 4, 4, 5, 5], answers).count(True)
     student_grade = [(1,oneP), (2,twoP), (3,thiP)]
-    mx = max(list(map(lambda x: x[1], student_grade)))
-    return list(map(lambda x: x[0], list(filter(lambda x: x[1] == mx, student_grade))))
+    mx = max(map(lambda x: x[1], student_grade))
+    return list(map(lambda x: x[0], filter(lambda x: x[1] == mx, student_grade)))
